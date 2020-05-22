@@ -11,7 +11,11 @@ let package = Package(
         .package(url: "https://github.com/ReactiveX/RxSwift.git", .upToNextMajor(from: "5.1.1")),
     ],
     targets: [
-        .target(name: "FSPagerView", path: "Sources", exclude: ["FSPagerViewObjcCompat.h", "FSPagerViewObjcCompat.m"]),
+        .target(
+            name: "FSPagerView", 
+            dependencies: ["RxSwift"], 
+            path: "Sources", 
+            exclude: ["FSPagerViewObjcCompat.h", "FSPagerViewObjcCompat.m"]),
     ],
     swiftLanguageVersions: [.v5]
 )

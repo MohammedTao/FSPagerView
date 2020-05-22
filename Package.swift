@@ -7,6 +7,9 @@ let package = Package(
     products: [
         .library(name: "FSPagerView", targets: ["FSPagerView"]),
     ],
+    dependencies: [
+        .package(url: "https://github.com/ReactiveX/RxSwift.git", .upToNextMajor(from: "5.0.0")),
+    ],
     targets: [
         .target(name: "FSPagerView", path: "Sources", exclude: ["FSPagerViewObjcCompat.h", "FSPagerViewObjcCompat.m"]),
     ],

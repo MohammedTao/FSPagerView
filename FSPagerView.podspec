@@ -18,5 +18,6 @@ Pod::Spec.new do |s|
   s.swift_version = '5.0'
   s.cocoapods_version = '>= 1.4.0'
   s.dependency "RxSwift"
+  s.dependency 'RxCocoa'
 
 end
